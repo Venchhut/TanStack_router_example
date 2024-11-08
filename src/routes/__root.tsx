@@ -15,7 +15,7 @@ function RootComponent() {
   return (
     <>
       <MantineProvider theme={theme} defaultColorScheme="dark">
-        <div className="p-2 flex gap-2 text-lg">
+        <div className="p-2 flex  gap-2 text-lg gap-20">
           <Link
             to="/"
             activeProps={{
@@ -25,6 +25,14 @@ function RootComponent() {
           >
             Home
           </Link>{" "}
+          <Link
+            to="/Posts"
+            activeProps={{
+              className: "font-bold",
+            }}
+          >
+            Post
+          </Link>
           <Link
             to="/about"
             activeProps={{

@@ -12,60 +12,63 @@ import {
   Group,
   Badge,
   Stack,
+  SimpleGrid,
 } from "@mantine/core";
 import { IconSearch } from "@tabler/icons-react";
 
 function ProductFilter() {
   return (
-    <Stack spacing="md">
-      {/* Keywords Section */}
-      <TextInput
-        placeholder="Keywords"
-        label="Keywords"
-        defaultValue="Spring, Smart"
-        rightSection={
-          <Button variant="outline" size="xs">
-            ×
-          </Button>
-        }
-      />
-
-      {/* Category Select */}
-      <Select
-        label="Category"
-        placeholder="Modern"
-        data={["Modern", "Classic", "Vintage"]}
-      />
-
-      {/* Checkbox Filters */}
+    <SimpleGrid>
       <Stack>
-        <Checkbox label="Label" />
-        <Checkbox label="Label" />
-        <Checkbox label="Label" />
-      </Stack>
+        {/* Keywords Section */}
+        <TextInput
+          placeholder="Keywords"
+          label="Keywords"
+          defaultValue="Spring, Smart"
+          rightSection={
+            <Button variant="outline" size="xs">
+              ×
+            </Button>
+          }
+        />
 
-      {/* Slider for Range */}
-      <div>
-        <Text>Label</Text>
-        <Slider defaultValue={50} labelAlwaysOn />
-      </div>
+        {/* Category Select */}
+        <Select
+          label="Category"
+          placeholder="Modern"
+          data={["Modern", "Classic", "Vintage"]}
+        />
 
-      {/* Color Filter */}
-      <Text>Color</Text>
-      <Stack>
-        <Checkbox label="Label" />
-        <Checkbox label="Label" />
-        <Checkbox label="Label" />
-      </Stack>
+        {/* Checkbox Filters */}
+        <Stack>
+          <Checkbox label="Label" />
+          <Checkbox label="Label" />
+          <Checkbox label="Label" />
+        </Stack>
 
-      {/* Size Filter */}
-      <Text>Size</Text>
-      <Stack>
-        <Checkbox label="Label" />
-        <Checkbox label="Label" />
-        <Checkbox label="Label" />
+        {/* Slider for Range */}
+        <div>
+          <Text>Label</Text>
+          <Slider defaultValue={50} labelAlwaysOn />
+        </div>
+
+        {/* Color Filter */}
+        <Text>Color</Text>
+        <Stack>
+          <Checkbox label="Label" />
+          <Checkbox label="Label" />
+          <Checkbox label="Label" />
+        </Stack>
+
+        {/* Size Filter */}
+        <Text>Size</Text>
+        <Stack>
+          <Checkbox label="Label" />
+          <Checkbox label="Label" />
+          <Checkbox label="Label" />
+        </Stack>
       </Stack>
-    </Stack>
+    </SimpleGrid>
   );
 }
 
@@ -75,9 +78,7 @@ function ProductCard() {
       <div
         style={{ height: 140, backgroundColor: "#f0f0f0", borderRadius: "4px" }}
       />
-      <Text align="center" mt="md">
-        Text
-      </Text>
+      <Text>Text</Text>
       <Text align="center" color="dimmed">
         $0
       </Text>
