@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { DarkLight } from "../components/DarkLight";
 import { HeaderMegaMenu } from "../components/HeaderMegaMenu";
+import { AppShell } from "@mantine/core";
 
 export const Route = createFileRoute("/")({
   component: HomeComponent,
@@ -10,16 +11,9 @@ export const Route = createFileRoute("/")({
 
 function HomeComponent() {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        flexWrap: "nowrap",
-        alignItems: "flex-start",
-      }}
-    >
+    <AppShell>
       <DarkLight />
       <HeaderMegaMenu />
-    </div>
+    </AppShell>
   );
 }
