@@ -79,7 +79,7 @@ const HomeComponent = () => {
       <div key={index}>{item.name}</div>
     </UnstyledButton>
   ));
-  return <SimpleGrid cols={4}>{items}</SimpleGrid>;
+  return <SimpleGrid cols={{ base: 2, md: 4 }}>{items}</SimpleGrid>;
 };
 
 export default HomeComponent;
