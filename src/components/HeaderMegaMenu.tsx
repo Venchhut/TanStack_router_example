@@ -16,6 +16,7 @@ import {
 import { IconChartLine } from "@tabler/icons-react";
 import { Link } from "@tanstack/react-router";
 import classes from "./state.module.css";
+import { useDisclosure } from "@mantine/hooks";
 const elements = [
   { position: 6, mass: 12.011, symbol: "C", name: "Carbon", color: "red" },
   { position: 7, mass: 14.007, symbol: "N", name: "Nitrogen", color: "blue" },
@@ -124,4 +125,19 @@ function Demo() {
       <Table.Tbody>{rows}</Table.Tbody>
     </Table>
   );
+}
+
+// useDisclosure
+
+function DemoDisclosure() {
+  const [opened, handlers] = useDisclosure(false);
+
+  // Sets opened to true
+  handlers.open();
+
+  // Sets opened to false
+  handlers.close();
+
+  // Sets opened to true if it was false and vice versa
+  handlers.toggle();
 }
